@@ -5,13 +5,12 @@ document.getElementById("pixel-size-input").addEventListener("mouseup",function(
 });
 
 document.getElementById("random-button").addEventListener("mouseup",function(e){
-    seedsHolder1=new VSeedHolder(parseInt(document.getElementById("seeds-counter").innerHTML));
+    seedsHolder1=new VSeedHolder(parseInt(document.getElementById("seeds-counter").innerHTML) || 10);
     engine.start();
 });
 
 document.getElementById("seeds-number").addEventListener("mouseup",function(e){
     seedsHolder1=new VSeedHolder(parseInt(this.value));
-    console.log(this.value)
     document.getElementById("seeds-counter").innerHTML=parseInt(this.value);
 
     engine.start();
