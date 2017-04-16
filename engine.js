@@ -72,12 +72,12 @@ function engine(widthArg,heightArg,optionsArg){
     
     var _draw=function(){
         _userDraw();
-        _requestAnimationFrameFunc.call(window,_draw);
+        //_requestAnimationFrameFunc.call(window,_draw);
     }
     
     var _update=function(){
         _userUpdate();
-        setTimeout(_update,optionsArg.updateCallbackTime);
+        //setTimeout(_update,optionsArg.updateCallbackTime);
     }
     
     var start = function(){

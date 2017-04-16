@@ -5,10 +5,35 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <canvas id="canvas-id" ></canvas>
+        <div>
+            <form id="dist-choose">
+                <input id="eu-dist" type="radio" name="dist" value="Euclidean Distance">
+                <label for="eu-dist">Euclidean Distance</label>
+                <input id="man-dist" type="radio" name="dist" value="Manhattan Distance" checked>
+                <label for="man-dist">Manhattan Distance</label>
+            </form>
+        </div>
+        <div>
+            <label for="pixel-size-input">Pixel Size</label>
+            <input id="pixel-size-input" type="range" name="firstname" min="1" max="20">
+            <span id="pixel-size-counter"></span>
+        </div>
+        <div>
+            <label for="seeds-number">Seeds Number</label>
+            <input id="seeds-number" type="range" name="firstname" min="2" max="20">
+            <span id="seeds-counter"></span>
+        </div>
+        <div>
+            <input id="random-button" type="button" name="firstname" value="Random Seeds">
+        </div>
+        <div>
+            <canvas id="canvas-id" ></canvas>
+        </div>
     </body>
     <script src="engine.js"></script>
     <script src="mouse.js"></script>
     <script src="keys.js"></script>
+    <script src="voronoi.js"></script>
     <script src="startup.js"></script>
+    <script src="interface.js"></script>
 </html>
